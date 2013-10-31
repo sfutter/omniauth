@@ -8,6 +8,10 @@
 </head>
 <body>
 
+	<%= link_to "sign in with twitter", user_omniauth_authorize_path(:twitter) %>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
 <%= yield %>
 
 </body>
