@@ -5,8 +5,8 @@ gem 'twitter', '5.0.0.rc1'
 gem 'omniauth-twitter'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'pry'
-gem 'better_errors'
-gem 'binding_of_caller'
+#gem 'better_errors'
+#gem 'binding_of_caller'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'

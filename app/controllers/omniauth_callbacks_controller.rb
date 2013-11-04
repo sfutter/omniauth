@@ -4,7 +4,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 		user = User.from_omniauth(request.env["omniauth.auth"])
 
 		if user.persisted?
-			flash.notice = "congrat. you're signed in!"
+			flash.notice = "Hello! You're signed in!"
 			sign_in_and_redirect user
 		
 		else
@@ -12,10 +12,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 			redirect_to new_user_registration_url
 		
 		end
-
-
 	end
-
 end
 
 

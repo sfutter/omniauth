@@ -1,0 +1,33 @@
+<h1>My Two Minute Breaks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Time</th>
+      <th>Category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead> 
+
+  <tbody>
+      <% @wires.each do |wire| %>
+        <tr>
+          <td><%= wire.title %></td>
+          <td><%= wire.time %></td>
+          <td><%= wire.category %></td>
+          <td><%= link_to 'Show', wire %></td>
+          <td><%= link_to 'Edit', edit_wire_path(wire) %></td>
+          <td><%= link_to 'Destroy', wire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<br>
+
+<%= link_to 'New Wire', new_wire_path %> <br><br>
+<%= link_to 'Home', root_path %>
+

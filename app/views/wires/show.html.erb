@@ -1,0 +1,18 @@
+<p>
+  <strong>Title:</strong>
+  <%= @wire.title %>
+</p>
+ 
+<p>
+  <strong>Time:</strong>
+  <%= @wire.time %>
+</p>
+
+
+<p>
+  <strong>Category:</strong>
+  <%= @wire.category %>
+</p>
+
+
+<%= link_to 'Back', wires_path %> | <%= link_to 'Edit', edit_wire_path(@wire) %>

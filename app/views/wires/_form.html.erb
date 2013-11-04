@@ -1,0 +1,31 @@
+<%= form_for @wire do |f| %>
+  <% if @wire.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@wire.errors.count, "error") %> prohibited
+      this wire from being saved:</h2>
+    <ul>
+    <% @wire.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :time %><br>
+    <%= f.text_field :time %>
+  </p>
+
+  <p>
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
